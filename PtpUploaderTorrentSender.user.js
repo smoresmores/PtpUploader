@@ -8,7 +8,7 @@
 // @namespace   http://greasemonkey.mozdev.com
 
 // @include     http*://*torviet.com/*
-// @include     http*://*awesome-hd.net/torrents.php*
+// @include     http*://*awesome-hd.me/torrents.php*
 // @include     http*://*bit-hdtv.com/details.php*
 // @include     http*://*chdbits.org/details.php*
 // @include     http*://*cinemageddon.net/details.php*
@@ -230,7 +230,7 @@ function Main()
 
 	if ( /https?:\/\/torviet\.com\/.*/.test( document.URL ) )
 		downloadLinkRegEx = /download.php\?id=\d+.*/;
-	else if ( /https?:\/\/.*?awesome-hd\.net\/torrents\.php\?id=.*/.test( document.URL ) )
+	else if ( /https?:\/\/.*?awesome-hd\.me\/torrents\.php\?id=.*/.test( document.URL ) )
 	{
 		downloadLinkRegEx = /torrents.php\?action=download.*?id=\d+.*/;
 		siteName = "ahd";
