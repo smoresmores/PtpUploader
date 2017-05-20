@@ -54,7 +54,7 @@ def ajaxExternalCreateJob():
 	releaseInfo.JobStartMode = JobStartMode.Manual
 	releaseInfo.SourceTorrentFilePath = sourceTorrentFilePath
 	releaseInfo.AnnouncementSourceName = "torrent"
-	releaseInfo.ReleaseName = releaseName
+	releaseInfo.ReleaseName = unicode( releaseName, "utf-8" )
 	releaseInfo.Size = torrentContentSize
 	releaseInfo.SetOverrideScreenshots( Settings.OverrideScreenshots )
 	releaseInfo.ReleaseNotes = Settings.ReleaseNotes
