@@ -121,13 +121,13 @@ def Main(argv):
 	MyGlobals.InitializeGlobals( Settings.WorkingPath )
 
 	if len( argv ) == 2:
-		releaseInfoMaker = ReleaseInfoMaker( argv[ 1 ] )
+		releaseInfoMaker = ReleaseInfoMaker( unicode( argv[ 1 ], "utf-8" ) )
 		releaseInfoMaker.MakeReleaseInfo()
 	elif len( argv ) == 3 and argv[ 1 ] == "--notorrent":
-		releaseInfoMaker = ReleaseInfoMaker( argv[ 2 ] )
+		releaseInfoMaker = ReleaseInfoMaker(  unicode( argv[ 2 ], "utf-8" ) )
 		releaseInfoMaker.MakeReleaseInfo( createTorrent = False )
 	elif len( argv ) == 3 and argv[ 1 ] == "--noscreens":
-		releaseInfoMaker = ReleaseInfoMaker( argv[ 2 ] )
+		releaseInfoMaker = ReleaseInfoMaker(  unicode( argv[ 2 ], "utf-8" ) )
 		releaseInfoMaker.MakeReleaseInfo( createScreens = False )
 
 if __name__ == '__main__':
